@@ -5,11 +5,10 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Copia el archivo pom.xml y el wrapper de Maven (si estás usando mvnw) al contenedor
-COPY mvnw pom.xml ./
+COPY mvnw pom.xml ./ 
 
 # Copia los archivos de tu código fuente al contenedor
 COPY src /app/src
-COPY test /app/test
 
 # Asegúrate de que el archivo mvnw sea ejecutable
 RUN chmod +x mvnw
