@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+        .container { max-width: 600px; margin: 20px auto; padding: 20px; background-color: #ffffff; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .header { background-color: #34A853; color: #ffffff; padding: 10px 20px; text-align: center; border-radius: 8px 8px 0 0; }
+        .content { padding: 20px; }
+        .info-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        .info-table td { padding: 8px; border: 1px solid #dddddd; }
+        .info-table .label { font-weight: bold; background-color: #f9f9f9; width: 30%; }
+        .footer { text-align: center; padding: 10px; font-size: 12px; color: #777777; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Confirmación de Cita Médica</h1>
+        </div>
+        <div class="content">
+            <p>Estimado/a <b th:text="${nombrePaciente}">Nombre Paciente</b>,</p>
+            <p>Le confirmamos que su cita ha sido agendada con éxito. A continuación, los detalles:</p>
+            
+            <table class="info-table">
+                <tr>
+                    <td class="label">Paciente:</td>
+                    <td th:text="${nombrePaciente}"></td>
+                </tr>
+                <tr>
+                    <td class="label">Doctor:</td>
+                    <td th:text="${nombreDoctor}"></td>
+                </tr>
+                <tr>
+                    <td class="label">Especialidad:</td>
+                    <td th:text="${especialidad}"></td>
+                </tr>
+                <tr>
+                    <td class="label">Fecha y Hora:</td>
+                    <td th:text="${fecha} + ' a las ' + ${hora}"></td>
+                </tr>
+                <tr>
+                    <td class="label">Consultorio:</td>
+                    <td th:text="${consultorio}"></td>
+                </tr>
+            </table>
+
+            <p style="margin-top: 20px;">Por favor, llegue con 15 minutos de anticipación. Si necesita cancelar o reprogramar su cita, contáctenos.</p>
+        </div>
+        <div class="footer">
+            <p>&copy; 2025 Clínica Salud y Bienestar. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</body>
+</html>

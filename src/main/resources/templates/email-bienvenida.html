@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+        .container { max-width: 600px; margin: 20px auto; padding: 20px; background-color: #ffffff; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .header { background-color: #4A90E2; color: #ffffff; padding: 10px 20px; text-align: center; border-radius: 8px 8px 0 0; }
+        .content { padding: 20px; line-height: 1.6; }
+        .footer { text-align: center; padding: 10px; font-size: 12px; color: #777777; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>¡Bienvenido/a a la Clínica!</h1>
+        </div>
+        <div class="content">
+            <p>Hola <b th:text="${nombre}">Nombre del Usuario</b>,</p>
+            <p>¡Gracias por registrarte en nuestro sistema de gestión de citas médicas!</p>
+            <p>Ahora puedes agendar y gestionar tus citas de manera fácil y rápida. Estamos aquí para cuidar de tu salud.</p>
+            <p>Saludos cordiales,<br>El equipo de la Clínica.</p>
+        </div>
+        <div class="footer">
+            <p>&copy; 2025 Clínica Salud y Bienestar. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</body>
+</html>
