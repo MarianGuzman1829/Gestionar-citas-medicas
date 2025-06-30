@@ -17,8 +17,7 @@ RUN chmod +x mvnw
 RUN java -version
 RUN ./mvnw -v
 
-# Ejecuta Maven para construir el proyecto y muestra más detalles sobre el error
-RUN ./mvnw clean install -X
+
 
 # Expone el puerto 8080 para la aplicación
 EXPOSE 8080
