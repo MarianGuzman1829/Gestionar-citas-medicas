@@ -13,11 +13,6 @@ COPY src /app/src
 # Asegúrate de que el archivo mvnw sea ejecutable
 RUN chmod +x mvnw
 
-# Verifica las versiones de Java y Maven para asegurar que todo esté bien configurado
-RUN java -version
-RUN ./mvnw -v
-
-
 
 # Expone el puerto 8080 para la aplicación
 EXPOSE 8080
